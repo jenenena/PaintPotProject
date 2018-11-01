@@ -14,6 +14,7 @@
 		BEB01BEB218B3CBB00C89C7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB01BE9218B3CBB00C89C7E /* LaunchScreen.storyboard */; };
 		BEB01BF6218B3CBB00C89C7E /* PaintPotProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB01BF5218B3CBB00C89C7E /* PaintPotProjectTests.swift */; };
 		BEB01C01218B3CBB00C89C7E /* PaintPotProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB01C00218B3CBB00C89C7E /* PaintPotProjectUITests.swift */; };
+		BEB01C12218B4B5A00C89C7E /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB01C11218B4B5A00C89C7E /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BEB01BFC218B3CBB00C89C7E /* PaintPotProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintPotProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB01C00218B3CBB00C89C7E /* PaintPotProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintPotProjectUITests.swift; sourceTree = "<group>"; };
 		BEB01C02218B3CBB00C89C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEB01C11218B4B5A00C89C7E /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				BEB01BE4218B3CB200C89C7E /* Main.storyboard */,
 				BEB01BE9218B3CBB00C89C7E /* LaunchScreen.storyboard */,
+				BEB01C11218B4B5A00C89C7E /* DrawingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB01C12218B4B5A00C89C7E /* DrawingView.swift in Sources */,
 				BEB01BE3218B3CB200C89C7E /* CreativityViewController.swift in Sources */,
 				BEB01BE1218B3CB200C89C7E /* AppDelegate.swift in Sources */,
 			);
