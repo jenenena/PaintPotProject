@@ -56,17 +56,18 @@ public class DrawingView: UIView
         logo.fill()
     }
     
-    public func myDrawing() -> Void
+    public func myDrawing()
     {
         let coolio = UIBezierPath()
         UIColor.magenta.setStroke()
+        coolio.lineWidth = 3.0
         coolio.move(to: CGPoint(x: 50, y: 400))
         coolio.addLine(to: CGPoint(x: 30, y: 390))
         coolio.addLine(to: CGPoint(x: 10, y: 390))
         coolio.addLine(to: CGPoint(x: -10, y: 400))
         coolio.move(to: CGPoint(x: 30, y: 420))
         coolio.addLine(to: CGPoint(x: 30, y: 439))
-        
+        coolio.stroke()
     }
     
     
