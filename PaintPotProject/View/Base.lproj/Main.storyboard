@@ -13,7 +13,7 @@
         <!--Creativity View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Creativity View Controller" customClass="ViewController" customModule="PaintPotProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Creativity View Controller" customClass="CreativityViewController" customModule="PaintPotProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                     <segue destination="DL3-oH-KfE" kind="show" id="Kb6-nU-BUi"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-JM-YKg">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcP-JM-YKg" userLabel="Drawing View" customClass="DrawingView" customModule="PaintPotProject" customModuleProvider="target">
                                 <rect key="frame" x="51" y="50" width="272" height="436"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.8635135093680637" blue="0.83036924532282042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
