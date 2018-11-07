@@ -13,6 +13,50 @@ private let reuseIdentifier = "artIdentifier"
 public class ArtCollectionViewController: UICollectionViewController
 {
 
+    //MARK: Data Members for Creativity Screen
+    
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRowCompact : CGFloat = 4
+    private let itemsPerRowNormal : CGFloat = 6
+    
+    private let creativeCS : [UIImage?] =
+    {
+        return [
+            UIImage(named: "PicassoShmicasso"),
+            UIImage(named: "VanGogh"),
+            UIImage(named: "BobbysToast"),
+            UIImage(named: "Octocat"),
+            UIImage(named: "MainframeHaiku"),
+            UIImage(named: "SwiftHaiku"),
+            UIImage(named: "JavaHaiku"),
+            UIImage(named: "SwiftDrawing")
+        ]
+    }()
+    
+    private let labels : [String] =
+    {
+        return [
+            "Picasso",
+            "Van Gogh",
+            "Bob Ross",
+            "My Octocat",
+            "Haiku about Mainframe",
+            "Haiku about Swift",
+            "Haiku about Java",
+            "A Drawing I Made in Swift"
+        ]
+    }()
+    
+    //MARK: - Lifecycle
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -49,7 +93,19 @@ public class ArtCollectionViewController: UICollectionViewController
     }
 
     // MARK: UICollectionViewDelegate
+    
+    public func collectionView(_collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem =  availableWidth / itemsPerRowCompact
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
 
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
