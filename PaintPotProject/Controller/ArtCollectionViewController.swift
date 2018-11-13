@@ -29,7 +29,8 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "MainframeHaiku"),
             UIImage(named: "SwiftHaiku"),
             UIImage(named: "JavaHaiku"),
-            UIImage(named: "SwiftDrawing")
+            UIImage(named: "SwiftDrawing"),
+            UIImage(named: "RobotLearning")
         ]
     }()
     
@@ -43,18 +44,13 @@ public class ArtCollectionViewController: UICollectionViewController
             "Haiku about Mainframe",
             "Haiku about Swift",
             "Haiku about Java",
-            "A Drawing I Made in Swift"
+            "A Drawing I Made in Swift",
+            "A Robot Who Is Learning"
         ]
     }()
     
     //MARK: - Lifecycle
-    
-    
-    
-    
-    
-    
-    
+
     
     
     public override func viewDidLoad()
@@ -65,32 +61,45 @@ public class ArtCollectionViewController: UICollectionViewController
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
 
         // Do any additional setup after loading the view.
     }
 
+    
+
     public override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
+
 
 
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return creativeCS.count
+        
+        //WHY DO WE NEED THIS?
     }
 
+    
+    
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+        
+        artCell.backgroundColor = .white
+        artCell.artImage.image = creativeCS[indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
+        // indexPath.row is like using .get
     
         // Configure the cell
     
-        return cell
+        return artCell
     }
+
 
     // MARK: UICollectionViewDelegate
     
@@ -104,7 +113,23 @@ public class ArtCollectionViewController: UICollectionViewController
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
+    
 
+    public func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func collectionView( collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
+    
+    
+    
+    
+    
+    
     
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
